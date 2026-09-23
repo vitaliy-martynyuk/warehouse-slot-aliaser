@@ -15,7 +15,7 @@ namespace slot
 	void swapSlots(Slot& x, Slot& y);
 	[[nodiscard]] bool transferStock(Slot& source, Slot& destination, Slot amount);
 	[[nodiscard]] bool transferStock(Slot* source, Slot* destination, Slot amount);
-	[[nodiscard]] bool isSlotEmpty(Slot* slot);
+	[[nodiscard]] bool isSlotEmpty(const Slot* slot);
 }
 
 #endif

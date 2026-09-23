@@ -33,7 +33,7 @@ namespace slot
 		return true;
 	}
 
-	bool isSlotEmpty(Slot* slot)
+	bool isSlotEmpty(const Slot* slot)
 	{
 		return !slot || !(*slot);
 	}
