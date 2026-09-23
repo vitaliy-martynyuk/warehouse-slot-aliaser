@@ -3,5 +3,5 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
-  <Project Path="Warehouse Slot Aliaser.vcxproj" />
+  <Project Path="Warehouse Slot Aliaser.vcxproj" Id="400b2a67-21f8-4e5c-8322-fead819f95d8" />
 </Solution>
