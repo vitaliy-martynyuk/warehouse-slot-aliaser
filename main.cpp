@@ -3,14 +3,15 @@
 
 int main()
 {
-	std::cout << slot::slot1 << ' ' << slot::slot2 << '\n';
+	slot::printSlotsInfo();
 	slot::swapSlots(slot::slot1, slot::slot2);
-	std::cout << slot::slot1 << ' ' << slot::slot2 << '\n';
+	slot::printSlotsInfo();
 
-	slot::transferStockByRef(slot::slot1, slot::slot2, 1);
-	std::cout << slot::slot1 << ' ' << slot::slot2 << '\n';
-	slot::transferStockByRef(slot::slot2, slot::slot1, 5);
-	std::cout << slot::slot1 << ' ' << slot::slot2 << '\n';
+	slot::printSlotsInfo(slot::transferStock(slot::slot1, slot::slot2, 1));
+	slot::printSlotsInfo(slot::transferStock(slot::slot2, slot::slot1, 200));
+
+	slot::printSlotsInfo(slot::transferStock(&slot::slot4, &slot::slot3, 5));
+	slot::printSlotsInfo(slot::transferStock(&slot::slot4, &slot::slot1, 2));
 
 	return 0;
 }

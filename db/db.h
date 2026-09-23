@@ -13,7 +13,10 @@ namespace slot
 	extern Slot slot4;
 
 	void swapSlots(Slot& x, Slot& y);
-	bool transferStockByRef(Slot& source, Slot& destination, Slot amount);
+	[[nodiscard]] bool transferStock(Slot& source, Slot& destination, Slot amount);
+	[[nodiscard]] bool transferStock(Slot* source, Slot* destination, Slot amount);
+
+	void printSlotsInfo(bool ok = true);
 }
 
 #endif
