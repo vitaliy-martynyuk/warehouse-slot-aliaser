@@ -11,7 +11,7 @@ namespace slot
 	extern Slot slot2;
 	extern Slot slot3;
 	extern Slot slot4;
-	constexpr Slot maxCapacity{ 30 };
+	constexpr Slot getMaxSlotCapacity() { return 30; };
 
 	void swapSlots(Slot& x, Slot& y);
 	[[nodiscard]] bool transferStock(Slot& source, Slot& destination, Slot amount);

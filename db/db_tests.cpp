@@ -1,3 +1,3 @@
 #include "db.h"
 
-static_assert(slot::maxCapacity == 30);
+static_assert(slot::getMaxSlotCapacity() == 30);

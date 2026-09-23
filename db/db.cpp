@@ -17,7 +17,7 @@ namespace slot
 	bool transferStock(Slot& source, Slot& destination, Slot amount)
 	{
 		if (source < amount) return false;
-		if (destination + amount > maxCapacity) return false;
+		if (destination + amount > getMaxSlotCapacity()) return false;
 		source -= amount;
 		destination += amount;
 
@@ -28,7 +28,7 @@ namespace slot
 	{
 		if (!source || !destination) return false;
 		if (*source < amount) return false;
-		if (*destination + amount > maxCapacity) return false;
+		if (*destination + amount > getMaxSlotCapacity()) return false;
 		*source -= amount;
 		*destination += amount;
 

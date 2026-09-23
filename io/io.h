@@ -2,6 +2,7 @@
 #define IO_H
 
 #include "../db/db.h"
+#include <cstddef>
 
 namespace io
 {
