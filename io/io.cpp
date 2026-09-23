@@ -17,7 +17,7 @@ namespace io
 		cout << "------------------------------\n\n";
 	}
 
-	void printSlotInfo(slot::Slot& slot, bool isEmpty)
+	void printSlotInfo(const slot::Slot& slot, bool isEmpty)
 	{
 		cout << "------------------------------\n";
 		if (isEmpty) cout << "Slot " << &slot << ": empty\n";

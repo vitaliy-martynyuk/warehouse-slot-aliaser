@@ -7,10 +7,16 @@ namespace slot
 {
 	using Slot = std::uint_fast32_t;
 
+	constexpr Slot getMaxSlotCapacity()
+	{
+		return 30;
+	}
+
 	extern Slot slot1;
 	extern Slot slot2;
 	extern Slot slot3;
 	extern Slot slot4;
+	constexpr Slot maxCapacity{ getMaxSlotCapacity() };
 
 	void swapSlots(Slot& x, Slot& y);
 	[[nodiscard]] bool transferStock(Slot& source, Slot& destination, Slot amount);
