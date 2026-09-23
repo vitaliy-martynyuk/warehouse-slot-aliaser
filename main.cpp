@@ -3,10 +3,9 @@
 
 int main()
 {
-	[[maybe_unused]] int x{ 0 };
-	std::cout << *(slot::slot1Ptr) << ' ' << *(slot::slot2Ptr) << '\n';
-	slot::swapSlots(slot::slot1Ref, slot::slot2Ref);
-	std::cout << *(slot::slot1Ptr) << ' ' << *(slot::slot2Ptr) << '\n';
+	std::cout << slot::slot1 << ' ' << slot::slot2 << '\n';
+	slot::swapSlots(slot::slot1, slot::slot2);
+	std::cout << slot::slot1 << ' ' << slot::slot2 << '\n';
 
 	return 0;
 }
