@@ -26,5 +26,8 @@
     <ClInclude Include="db\db.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="io\io.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

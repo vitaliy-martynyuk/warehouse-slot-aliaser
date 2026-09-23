@@ -1,5 +1,4 @@
 #include "db.h"
-#include <iostream>
 
 namespace slot
 {
@@ -26,23 +25,11 @@ namespace slot
 
 	bool transferStock(Slot* source, Slot* destination, Slot amount)
 	{
+		if (!source || !destination) return false;
 		if (*source < amount) return false;
 		*source -= amount;
 		*destination += amount;
 
 		return true;
-	}
-
-	void printSlotsInfo(bool ok)
-	{
-		using std::cout;
-
-		cout << "------------------------------\n";
-		if (!ok) cout << ">>Previous operation falied!<<\n------------------------------\n";
-		cout << "Slot 1: " << slot1 << '\n';
-		cout << "Slot 2: " << slot2 << '\n';
-		cout << "Slot 3: " << slot3 << '\n';
-		cout << "Slot 4: " << slot4 << '\n';
-		cout << "------------------------------\n\n";
 	}
 }
