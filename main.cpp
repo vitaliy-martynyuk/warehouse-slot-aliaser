@@ -15,5 +15,9 @@ int main()
 
 	io::printSlotsInfo(slot::transferStock(nullptr, &slot::slot1, 5));
 
+	io::printSlotInfo(slot::slot1, slot::isSlotEmpty(&slot::slot1));
+	io::printSlotsInfo(slot::transferStock(&slot::slot1, &slot::slot2, 3));
+	io::printSlotInfo(slot::slot1, slot::isSlotEmpty(&slot::slot1));
+
 	return 0;
 }

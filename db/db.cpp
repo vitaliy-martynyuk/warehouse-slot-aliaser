@@ -32,4 +32,9 @@ namespace slot
 
 		return true;
 	}
+
+	bool isSlotEmpty(Slot* slot)
+	{
+		return !slot || !(*slot);
+	}
 }
