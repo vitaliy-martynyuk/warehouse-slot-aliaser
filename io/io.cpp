@@ -1,6 +1,7 @@
 #include "io.h"
 #include "../db/db.h"
 #include <iostream>
+#include <cassert>
 
 namespace io
 {
@@ -23,6 +24,14 @@ namespace io
 		if (isEmpty) cout << "Slot " << &slot << ": empty\n";
 		else cout << "Slot " << &slot << ": " << slot << '\n';
 
+		cout << "------------------------------\n\n";
+	}
+
+	void printSlotInfo(std::nullptr_t, bool isEmpty)
+	{
+		assert(isEmpty && "nullptr slot must be empty!");
+		cout << "------------------------------\n";
+		cout << "Slot NULL: empty\n";
 		cout << "------------------------------\n\n";
 	}
 }

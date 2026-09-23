@@ -18,7 +18,7 @@ int main()
 	io::printSlotInfo(slot::slot1, slot::isSlotEmpty(&slot::slot1));
 	io::printSlotsInfo(slot::transferStock(&slot::slot1, &slot::slot2, 3));
 	io::printSlotInfo(slot::slot1, slot::isSlotEmpty(&slot::slot1));
-	io::printSlotInfo(slot::slot1, slot::isSlotEmpty(nullptr));
+	io::printSlotInfo(nullptr, slot::isSlotEmpty(nullptr));
 
 	io::printSlotsInfo(slot::transferStock(&slot::slot2, &slot::slot3, 16));
 	io::printSlotsInfo(slot::transferStock(&slot::slot4, &slot::slot3, 9));
