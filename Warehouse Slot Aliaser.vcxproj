@@ -145,7 +145,14 @@
     </Manifest>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="db\db.cpp" />
+    <ClCompile Include="db\db_tests.cpp" />
+    <ClCompile Include="io\io.cpp" />
     <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="db\db.h" />
+    <ClInclude Include="io\io.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

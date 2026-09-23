@@ -1,7 +1,27 @@
-#include <iostream>
+#include "db/db.h"
+#include "io/io.h"
 
-int main() 
+int main()
 {
-	std::cout << "Hello World!";
+	io::printSlotsInfo();
+	slot::swapSlots(slot::slot1, slot::slot2);
+	io::printSlotsInfo();
+
+	io::printSlotsInfo(slot::transferStock(slot::slot1, slot::slot2, 1));
+	io::printSlotsInfo(slot::transferStock(slot::slot2, slot::slot1, 200));
+
+	io::printSlotsInfo(slot::transferStock(&slot::slot4, &slot::slot3, 5));
+	io::printSlotsInfo(slot::transferStock(&slot::slot4, &slot::slot1, 2));
+
+	io::printSlotsInfo(slot::transferStock(nullptr, &slot::slot1, 5));
+
+	io::printSlotInfo(slot::slot1, slot::isSlotEmpty(&slot::slot1));
+	io::printSlotsInfo(slot::transferStock(&slot::slot1, &slot::slot2, 3));
+	io::printSlotInfo(slot::slot1, slot::isSlotEmpty(&slot::slot1));
+	io::printSlotInfo(nullptr, slot::isSlotEmpty(nullptr));
+
+	io::printSlotsInfo(slot::transferStock(&slot::slot2, &slot::slot3, 16));
+	io::printSlotsInfo(slot::transferStock(&slot::slot4, &slot::slot3, 9));
+
 	return 0;
 }
