@@ -1,4 +1,5 @@
 #include "db.h"
+#include <cassert>
 
 namespace slot
 {
@@ -12,5 +13,12 @@ namespace slot
 		Slot tmp{ y };
 		y = x;
 		x = tmp;
+	}
+
+	void transferStockByRef(Slot& source, Slot& destination, Slot amount)
+	{
+		assert(source >= amount && "Transfer stock error!");
+		source -= amount;
+		destination += amount;
 	}
 }
