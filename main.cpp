@@ -1,6 +1,5 @@
 #include "db/db.h"
 #include "io/io.h"
-#include <iostream>
 
 int main()
 {

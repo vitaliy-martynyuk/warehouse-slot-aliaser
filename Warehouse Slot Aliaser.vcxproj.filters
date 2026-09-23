@@ -21,6 +21,9 @@
     <ClCompile Include="db\db.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="io\io.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="db\db.h">
